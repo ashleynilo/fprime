@@ -375,10 +375,10 @@ cd /path/to/plugin/directory
 pip install -e .
 ```
 
-!!! warning
-    Users must be in the same virtual environment that the `fprime-gds` package has been installed into
-
-    `-e` allows local changes to take effect without a reinstall
+> [!WARNING]
+> Users must be in the same virtual environment that the `fprime-gds` package has been installed into
+>
+> `-e` allows local changes to take effect without a reinstall
 
 The first step in testing a plugin is to run `fprime-gds --help`. This should show arguments associated with your plugin.
 The plugins implemented here would produce the following output:
