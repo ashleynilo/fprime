@@ -34,8 +34,8 @@ following table and are available to both the ground system, events, channels, a
 | NATIVE_UINT_TYPE | unsigned int  | architecture dependent unsigned integer |
 | POINTER_CAST     |               | integer of sufficient size to store a pointer for the architecture |
 
-!!! note
-    C/C++ types come from `stdint.h` and `stdbool.h`.  The last three types above are not of set size but are architecture-dependent. Should a project's architecture not support all these types, see: [Configuring F´: Architecture Supported Primitive Types](../framework/configuring-fprime.md)
+> [!NOTE]
+> C/C++ types come from `stdint.h` and `stdbool.h`.  The last three types above are not of set size but are architecture-dependent. Should a project's architecture not support all these types, see: [Configuring F´: Architecture Supported Primitive Types](../framework/configuring-fprime.md)
 
 ## Polymorphic Type
 

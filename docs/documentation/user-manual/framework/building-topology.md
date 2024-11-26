@@ -1,7 +1,7 @@
 # Constructing the F´ Topology
 
-!!! note
-    For a hands-on walk-through of build topologies, please see: [Tutorials](../../tutorials/index.md)
+> [!NOTE]
+> For a hands-on walk-through of build topologies, please see: [Tutorials](../../tutorials/index.md)
 
 The executing software consists of a set of interconnected components
 executing on the threads of the active components or driven by other

@@ -5,8 +5,8 @@ how it can be used, and a detailed reference for interested users. `fprime-cli` 
 features without the need for a graphical environment. This enables projects easier access to F´ testing and operations
 in more environments.
 
-!!! note
-    Developer documentation is available in the [developer's CLI guide](../../reference/gds-cli-dev.md).
+> [!NOTE]
+> Developer documentation is available in the [developer's CLI guide](../../reference/gds-cli-dev.md).
 
 - [What is `fprime-cli`?](#what-is-fprime-cli)
 - [Getting Started](#getting-started)
@@ -225,8 +225,8 @@ $ fprime-cli command-send health.HLTH_CHNG_PING --arguments eventLogger 50 20
 ```
 
 
-!!! note
-    If you need to pass in a string with spaces as an argument, just enclose it in quotes `"like this"`.
+> [!NOTE]
+> If you need to pass in a string with spaces as an argument, just enclose it in quotes `"like this"`.
 
 Similar to the other CLI tools, you can run `fprime-cli command-send -l` to get a list of the available commands and
 the arguments they take. The same filter options are available to search for particular commands. If you have tab

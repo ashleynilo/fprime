@@ -65,8 +65,8 @@ design and is known as the "kind" of port's instantiation.
 | async_input | in | asynchronous | no | no | `func1()` | |
 | guarded_input | in | synchronous | yes | yes | `func3()` | Guarded ports by definition must be synchronous |
 
-!!! note
-    A port's type (aka data_type) is dependent on the design and usage in the deployment.
+> [!NOTE]
+> A port's type (aka data_type) is dependent on the design and usage in the deployment.
 
 ![Port Instance Kinds](../../../img/core2.png)
 
@@ -206,8 +206,8 @@ is defined input port side of the connection and thus there are no special restr
 | Queued  | 0 or more | 1 or more | 1 or more |
 | Active  | 0 or more | 0 or more | 1 or more |
 
-!!! note
-    The designer should be aware of how the different calls interact, for example during reentrant port calls guarded ports may deadlock.
+> [!NOTE]
+> The designer should be aware of how the different calls interact, for example during reentrant port calls guarded ports may deadlock.
 
 ## Topology: F´ Application
 

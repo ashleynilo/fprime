@@ -19,8 +19,8 @@ Also of note is the framing protocol, which breaks out the handling of the byte 
 of these stages need to allocate memory and thus users should also consult the [buffer management](../framework/dynamic-memory.md)
 guide.
 
-!!! note
-    in this guide we will refer to the driver layer but many projects will refer to it as the radio or communication layer. The function of this layer is to read and write bytes to some hardware and the nature of that hardware is irrelevant as long as it can send and receive bytes.
+> [!NOTE]
+> in this guide we will refer to the driver layer but many projects will refer to it as the radio or communication layer. The function of this layer is to read and write bytes to some hardware and the nature of that hardware is irrelevant as long as it can send and receive bytes.
 
 ## Ground Interface Architecture
 
@@ -37,8 +37,8 @@ Drivers manage hardware communications. These can be simple hardware interfaces 
 constructs (e.g. radios, spacecraft buses). From the perspective of F´, the driver has two functions: provide incoming
 data and handle outgoing data.
 
-!!! note
-    typically projects use a single driver to handle both input and output, however; two drivers may be used to if differing behavior is needed for uplink and downlink.(e.g. UDP downlink for speed and  Tcp uplink reliability).
+> [!NOTE]
+> typically projects use a single driver to handle both input and output, however; two drivers may be used to if differing behavior is needed for uplink and downlink.(e.g. UDP downlink for speed and  Tcp uplink reliability).
 
 All drivers implement an input port receiving data from the framer. The driver should write input data to the hardware
 the driver manages. Drivers implement at least one of two methods to retrieve data from hardware: an input port
@@ -46,8 +46,8 @@ to poll for available data and an output read port for asynchronous data, which 
 Generic drivers implement both such that they can be used in a threaded context or rate group-driven polling context.
 The driver is responsible for reading the data from the hardware in either context.
 
-!!! note
-    the F´ uplink layer is compatible with both polling and receiving drivers as described in **Uplink** below.
+> [!NOTE]
+> the F´ uplink layer is compatible with both polling and receiving drivers as described in **Uplink** below.
 
 **Sending Data**
 
@@ -173,8 +173,8 @@ class MyDeframeProtocol : public DeframingProtocol {
 Here the protocol starts a frame with `0xdeadbeef` and uses size to extra the data. Deframing is typically the inverse
 of the framing protocol as seen in this example.
 
-!!! note
-    implementors should always use `peak` to get data and never rotate it, as Svc.Deframer will rotate the buffer based on the status.
+> [!NOTE]
+> implementors should always use `peak` to get data and never rotate it, as Svc.Deframer will rotate the buffer based on the status.
 
 ## Adding a Custom Driver 
 

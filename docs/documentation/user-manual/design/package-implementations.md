@@ -8,8 +8,8 @@ These packages must be fully specified. Thus, every platform must specify a spec
 
 Modules that require an implementation should call the CMake API function `require_fprime_implementation()` to declare a requirement on a specific implementation. For example, the Os module `require_fprime_implementation(Os/Task)` declares that some implementation of `Os/Task` is required.
 
-!!! note
-    Only `Os` requires an implementation of `Os/Task` as users of the `Os` package get the implementation through `Os` and should not specify it directly.
+> [!NOTE]
+> Only `Os` requires an implementation of `Os/Task` as users of the `Os` package get the implementation through `Os` and should not specify it directly.
 
 ## Choosing an Implementation
 
@@ -21,8 +21,8 @@ Choosing an implementation is done with a series of `choose_fprime_implementatio
 
 Some executables, unit tests, and deployments may wish to use a different implementation than that specified by the platform. This can be done by a `choose_fprime_implementation` call in the deployment, executable, or unit test's module. For example, a unit test may wish to choose `Os_File_Stub` as an implementation of `Os_File` to disable platform file system support for the given unit test.
 
-!!! note
-    A CMake target with the name of the chosen implementor *must* be defined somewhere in F´, an F´ library used by the project, or by the project itself.
+> [!NOTE]
+> A CMake target with the name of the chosen implementor *must* be defined somewhere in F´, an F´ library used by the project, or by the project itself.
 
 ## Defining an Implementation
 

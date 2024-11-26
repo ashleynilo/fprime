@@ -32,10 +32,8 @@ activating along with the virtual environment. Manually activating per-shell req
 change the Python-managed virtual environment file. Activating along with the virtual environment is convenient, but
 edits a file that is managed by Python and issues may arise across Python versions.
 
-!!! note
-
-    It is possible to add these commands to a `.bashrc` or `.cshrc` file but this is outside the scope of this
-    guide.
+> [!NOTE]
+> It is possible to add these commands to a `.bashrc` or `.cshrc` file but this is outside the scope of this guide.
 
 ### Manual Activation (Run In Each New Shell)
 
@@ -83,8 +81,8 @@ omitting this section would fix any problems caused by this.
 === "tcsh"
     `#!shell register-python-argcomplete --shell tcsh fprime-cli >> $VIRTUAL_ENV/bin/activate.csh`
 
-!!! note
-    To take advantage of these changes immediately, reactivate the virtual environment at this point.
+> [!NOTE]
+> To take advantage of these changes immediately, reactivate the virtual environment at this point.
 
 ## Autocomplete Tool Support
 

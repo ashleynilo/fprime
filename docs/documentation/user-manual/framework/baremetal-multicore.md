@@ -24,8 +24,8 @@ First and foremost, baremetal F´ systems should avoid using **Active Components
 require quasi-asynchronous execution contexts in which to run. i.e. they need thread such that they can execute in
 "parallel" with each other.
 
-!!! note
-    If you **must** use **Active Components** you should thoroughly review the [thread virtualization](#thread-virtualization) section of this document and associated technology.
+> [!NOTE]
+> If you **must** use **Active Components** you should thoroughly review the [thread virtualization](#thread-virtualization) section of this document and associated technology.
 
 If your system can be entirely defined by **Passive Components** then implicitly every port **invocation** would be
 synchronous and the execution context would be entirely delegated to every component.  A discussion of the source
@@ -40,8 +40,8 @@ driven by [rate groups](../design/rate-group.md). Designing the system this way 
 one source: the rate group driver and thus reducing the problem to supplying an execution context to the rate group
 driver at a set rate.  All calls needed will execute during a sweep through the rate groups and their derived rates.
 
-!!! note
-    Other options exist (see [Thread Virtualization](#thread-virtualization) below).
+> [!NOTE]
+> Other options exist (see [Thread Virtualization](#thread-virtualization) below).
 
 Although a full discussion of supplying execution context to the rate group driver is outside the scope of this
 documentation, this author wanted to provide a few tips. First, F´ execution should be primarily derived from the main
@@ -62,16 +62,16 @@ Now all that is required is to determine when this interval has elapsed. This ca
 signal, calculating elapsed time by the reading of clock registers, using timing library functions, the `sleep()` call, or
 by a timer-driven interrupt service routine (ISR).
 
-!!! note
-    ISRs are complex items and should be studied in detail before going this route.  Notably, the ISR should not execute the rate group directly, but rather should set a flag or queue a start message and allow the `while (true) {}` spin in the main loop to detect this signal and start the rate groups.
+> [!NOTE]
+> ISRs are complex items and should be studied in detail before going this route.  Notably, the ISR should not execute the rate group directly, but rather should set a flag or queue a start message and allow the `while (true) {}` spin in the main loop to detect this signal and start the rate groups.
 
 ## Multi-Core and Multi-Device Systems
 
 We have yet to see any issues running F´ on multi-core systems. Some users have been successful in scheduling high-priority
 components to designated cores.  In general, these systems behave just fine.
 
-!!! note
-    Some portions of F´ use `U32` types so synchronize between threads. In many systems this is a safe atomic operation, however; this is not guaranteed in all systems. A project should use care to ensure that its system will behave as expected.  These usages are under review and will be corrected over time.
+> [!NOTE]
+> Some portions of F´ use `U32` types so synchronize between threads. In many systems this is a safe atomic operation, however; this is not guaranteed in all systems. A project should use care to ensure that its system will behave as expected.  These usages are under review and will be corrected over time.
 
 When running F´ on multi-platform systems, users typically define a deployment for each platform in the system. These
 deployments are then linked over the platform's inter-communication architecture.  Should  users want F´ execution
@@ -80,8 +80,8 @@ across these deployments to look like a single F´ deployment, users are advised
 
 ## Thread Virtualization
 
-!!! note
-    This is an experimental technology with respect to F´. Care to understand its implementation should be taken before using it in a production/flight context.
+> [!NOTE]
+> This is an experimental technology with respect to F´. Care to understand its implementation should be taken before using it in a production/flight context.
 
 Some systems, even baremetal systems, require the use of **Active Components**.  Many of the `Svc` components are by
 design active components. It is impractical to assume that all projects can, at the moment of conception, discard all

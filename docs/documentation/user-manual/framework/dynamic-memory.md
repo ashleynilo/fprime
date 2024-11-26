@@ -75,8 +75,8 @@ my_buffer.getSerializeRepr().serialize(mv_value);
 U32 my_value_again = 0;
 my_buffer.getSerializeRepr().deserialize(mv_value_again);
 ```
-!!! note
-    To use this method types must inherit from `Fw::Serializable` or be basic types.
+> [!NOTE]
+> To use this method types must inherit from `Fw::Serializable` or be basic types.
 
 Users can access the `Fw::Buffer`'s data directly using `Fw::Buffer.getData()`, which will return a `U8*` pointer to the
 buffer's memory. Care should be taken as this is a raw pointer and thus buffer overruns are possible.
@@ -219,8 +219,8 @@ The rules for specifying bins:
 3. Any unused bins should have numBuffers set to 0.
 4. A single bin can be specified if a single size is needed. 
    
-!!! note
-    a pointer to the Fw::MemAllocator used in setup() is stored for later memory cleanup. The instance of the allocator must persist beyond calling the cleanup() function or the destructor of BufferManager if cleanup() is not called. If a project-specific manual memory allocator is not needed, Fw::MallocAllocator can be used to supply heap allocated memory.
+> [!NOTE]
+> a pointer to the Fw::MemAllocator used in setup() is stored for later memory cleanup. The instance of the allocator must persist beyond calling the cleanup() function or the destructor of BufferManager if cleanup() is not called. If a project-specific manual memory allocator is not needed, Fw::MallocAllocator can be used to supply heap allocated memory.
 
 **Example Setup of Svc.BufferManager**
 ```c++

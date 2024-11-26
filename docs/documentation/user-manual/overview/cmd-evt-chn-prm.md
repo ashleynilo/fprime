@@ -8,8 +8,8 @@ events, and telemetry channels.
 Parameters allow for controlling stored values that affect the operation of an F´ system. They have framework support
 to automatically, load, store, and set these values using commands.
 
-!!! note
-    Events are sometimes called EVRs and telemetry channels are sometimes called EHAs.
+> [!NOTE]
+> Events are sometimes called EVRs and telemetry channels are sometimes called EHAs.
 
 These types will be elaborated within this guide. It contains:
 
@@ -95,8 +95,8 @@ uniqueness.
 with the event. These are injected into the format string for a full text representation of the event.
 5. format string: a C-style format string used to reconstruct a text version of the event.
 
-!!! note
-    the use of events to severity levels are based on the judgement of the system designer.
+> [!NOTE]
+> the use of events to severity levels are based on the judgement of the system designer.
 
 Code in the component-specific generated base class provides a function to call to emit each event defined by the
 component. This function expects an argument to be supplied for each argument defined by the event. The code generator
@@ -146,8 +146,8 @@ Components using this service should hook up the telemetry port to the telemetry
 class function retrieves the time tag from the time source component and then writes the updated value to the telemetry
 database component. The telemetry database is called periodically to send the current set of telemetry to the ground.
 
-!!! note
-    the periodic call to the telemetry database is typically made by a [rate group](../design/rate-group.md).
+> [!NOTE]
+> the periodic call to the telemetry database is typically made by a [rate group](../design/rate-group.md).
 
 ## Parameters
 

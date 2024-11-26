@@ -394,16 +394,16 @@ Gds_App Plugin 'my-app' Options:
   --disable-my-app      Disable the gds_app plugin 'my-app' (default: False)
   --message MESSAGE     Message to print (default: None)
 ```
-!!! warning
-    Syntax errors, indentation errors, and other exceptions can arise during this step. Resolving these errors will allow the help message to display properly.
+> [!WARNING]
+> Syntax errors, indentation errors, and other exceptions can arise during this step. Resolving these errors will allow the help message to display properly.
 
 To test selection plugins, select them during a normal GDS run:
 
 ```
 fprime-gds --framing-selection my-plugin
 ```
-!!! warning
-    Remember to supply any arguments needed for your plugin!
+> [!WARNING]
+> Remember to supply any arguments needed for your plugin!
 
 Application plugins run automatically at start-up. To test these plugins, just supply any desired arguments:
 

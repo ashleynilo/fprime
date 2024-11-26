@@ -58,8 +58,8 @@ Not including imports used only for type hints, or dependencies for modules not 
 
 ![](../../img/overall_dependencies_edited.png)
 
-!!! note
-    The above graph has arrows pointing **to** the module that does the importing and away from the dependency, and does not include Python standard library imports.
+> [!NOTE]
+> The above graph has arrows pointing **to** the module that does the importing and away from the dependency, and does not include Python standard library imports.
 
 -   All parsing is handled in `fprime_cli`, which imports the command modules and several external libraries to help with parsing.
 -   Each command is implemented separately, but shares a large portion of its code with other modules via the `Common` module files, as well as importing the appropriate GDS data type for the type of data it's working with (and, in the case of `command_send`, an appropriate exception).

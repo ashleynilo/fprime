@@ -38,8 +38,8 @@ Choose the operating system you are using to install F Prime:
 
     To start Ubuntu under WSL, search for Ubuntu in the start menu and select the "Ubuntu on Windows" app. All class commands should be run on these Ubuntu terminals.
 
-    !!! note
-        Full instructions and troubleshooting help is available in the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/wsl/install).
+    > [!NOTE]
+    > Full instructions and troubleshooting help is available in the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/wsl/install).
 
     **IMPORTANT:**
 
@@ -92,8 +92,8 @@ Choose the operating system you are using to install F Prime:
 
 ### Installing the Toolchain
 
-!!! note
-    macOS users must run these commands from within the Docker container described in [Appendix I](#appendix-i-installing-rancher-desktop-and-the-f-arm-container) or setup a Linux virtual machine.
+> [!NOTE]
+> macOS users must run these commands from within the Docker container described in [Appendix I](#appendix-i-installing-rancher-desktop-and-the-f-arm-container) or setup a Linux virtual machine.
 
 Installing the cross-compiler will use the pre-built packages provided by ARM. Follow these 
 instructions to install these tools for the target hardware into the `/opt/toolchains` directory.
@@ -135,8 +135,8 @@ For users running on 64-bit arm the platform is called `aarch64-linux`, and for 
 on 32-bit arm use `arm-hf-linux`. This package expects the environment variable 
 `ARM_TOOLS_PATH` to point to the installation directory of the ARM cross-compilers.
 
-!!! note
-    Users need to generate for each platform they wish to run on.
+> [!NOTE]
+> Users need to generate for each platform they wish to run on.
 
 Here is how to build for the 64-bit Arm Linux platform:
 
@@ -158,8 +158,8 @@ fprime-util build aarch64-linux
 fprime-util generate arm-hf-linux
 fprime-util build arm-hf-linux
 ```
-!!! note
-    macOS users must run these commands from within the Docker container described in [Appendix I](#appendix-i-installing-rancher-desktop-and-the-f-arm-container).
+> [!NOTE]
+> macOS users must run these commands from within the Docker container described in [Appendix I](#appendix-i-installing-rancher-desktop-and-the-f-arm-container).
 
 ## F´ Running on ARM Linux Tutorial
 
@@ -218,8 +218,8 @@ Some users may with to run cross-compilers within docker to minimize the impact 
 
 Rancher Desktop is an alternative to Docker Desktop that allows users to run docker containers directly on their desktop  computer. It does not require a license for use like Docker Desktop does and also supports both intel and ARM based  Macintosh computers.
 
-!!! note
-    Non-Macintosh users are advised to run without the below Docker container
+> [!NOTE]
+> Non-Macintosh users are advised to run without the below Docker container
 
 To install [Rancher Desktop](https://rancherdesktop.io/), follow the instructions for your operating system. When presented with a "Welcome to Rancher Desktop" dialog, choose the following settings:
 1. Disable Kubernetes
@@ -249,5 +249,5 @@ Alternatively, the user may run the following command to start the terminal
 docker run --platform=linux/amd64 --net host -e USER=$USER -u "`id -u`:`id -g`" -v "/path/to/project:/project" -it nasafprime/fprime-arm:latest
 ```
 
-!!! note
-    Anytime Macintosh users run cross-compilation commands, they **must** do so in a terminal inside the docker container.
+> [!NOTE]
+> Anytime Macintosh users run cross-compilation commands, they **must** do so in a terminal inside the docker container.

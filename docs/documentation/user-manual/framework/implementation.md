@@ -1,7 +1,7 @@
 # F´ Implementation Classes
 
-!!! note
-    for a hands-on walk-through of build topologies, please see: [Tutorials](../../tutorials/index.md)
+> [!NOTE]
+> for a hands-on walk-through of build topologies, please see: [Tutorials](../../tutorials/index.md)
 
 The code generator takes the XML definitions in the previous section and
 generates C++ base classes. The developer writes classes that derive

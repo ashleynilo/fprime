@@ -4,8 +4,8 @@
 
 This installation guide is specifically designed to enable individuals and researchers to get up and running with F´ quickly. Larger projects with specific requirements may need to extend this process.
 
-!!! note
-    See the [troubleshooting](#troubleshooting) section at the bottom for help resolving common issues found during F´ installs.
+> [!NOTE]
+> See the [troubleshooting](#troubleshooting) section at the bottom for help resolving common issues found during F´ installs.
 
 **Sections:**
 
@@ -27,16 +27,16 @@ Requirements:
 4. CLang or GNU C and C++ compilers (e.g. gcc and g++)
 5. [Python 3.8+](https://www.python.org/downloads/), virtual environments, and PIP
 
-!!! note
-    Latest versions of PIP are strongly recommended. See [Recommended PIP Versions](#recommended-pip-versions)
-
-    For build host architectures other than x86_64 or aarch64, and systems with older PIP versions, Java is required
-
-    Ubuntu and Debian users should see notes on [Python installation](#ubuntu-debian-java-and-python-pip)
-
-    macOS users must ensure the [CMake command line utility is on their path](#macos-and-cmake-command-not-found)
-
-    Other OS-specific notes are in the [Troubleshooting](#troubleshooting) section below.
+> [!NOTE]
+> Latest versions of PIP are strongly recommended. See [Recommended PIP Versions](#recommended-pip-versions)
+>
+> For build host architectures other than x86_64 or aarch64, and systems with older PIP versions, Java is required
+>
+> Ubuntu and Debian users should see notes on [Python installation](#ubuntu-debian-java-and-python-pip)
+>
+> macOS users must ensure the [CMake command line utility is on their path](#macos-and-cmake-command-not-found)
+>
+> Other OS-specific notes are in the [Troubleshooting](#troubleshooting) section below.
 
 
 ## Creating a new F´ Project
@@ -50,8 +50,8 @@ The F´ Bootstrap tool is responsible for creating a new F´ project and install
 pip install fprime-bootstrap
 ```
 
-!!! tip
-    Some macOS users see an SSL error. [Correct the SSL error](#ssl-error-with-python-38-on-macos) and rerun the above command.
+> [!TIP]
+> Some macOS users see an SSL error. [Correct the SSL error](#ssl-error-with-python-38-on-macos) and rerun the above command.
 
 ### 2. Create a new project
 
@@ -79,8 +79,8 @@ Once the project is created, activate the virtual environment to use the F´ too
 cd MyProject
 . fprime-venv/bin/activate
 ```
-!!! warning
-    Always remember to activate the virtual environment whenever you work with this F´  project.
+> [!WARNING]
+> Always remember to activate the virtual environment whenever you work with this F´  project.
 
 [Next steps: HelloWorld Tutorial](https://fprime-community.github.io/fprime-tutorial-hello-world/){ .md-button .md-button--primary }
 
@@ -92,14 +92,14 @@ Sometimes users wish to work with existing F´ projects. Once the project has be
 
 2. Download the project
 
-    !!! note
-        When using `git` and submodules, remember to run `git submodule update --init --recursive`
+    > [!NOTE]
+    > When using `git` and submodules, remember to run `git submodule update --init --recursive`
 
 3. Install the required F´ tools version
 `pip install -r <project>/fprime/requirements.txt`
 
-    !!! note
-        Some projects ship their own `requirements.txt`.  Install using that file if it exists.
+    > [!NOTE]
+    > Some projects ship their own `requirements.txt`.  Install using that file if it exists.
 
 
 ## Troubleshooting

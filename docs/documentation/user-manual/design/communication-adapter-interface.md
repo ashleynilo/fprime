@@ -24,8 +24,8 @@ stream driver model for backwards compatibility.
 | `output` | `comStatus`    | `Fw.SuccessCondition` | Port indicating status of outgoing transmission. See protocol. |
 
 
-!!! note 
-    components implementing the *Communication Adapter Interface* must deallocate any `Fw::Buffer` received on the `comDataIn` port or must delegate the deallocation to another component (e.g. a driver). See [Memory Management in F´ (under construction)](memory.md)
+> [!NOTE]
+> components implementing the *Communication Adapter Interface* must deallocate any `Fw::Buffer` received on the `comDataIn` port or must delegate the deallocation to another component (e.g. a driver). See [Memory Management in F´ (under construction)](memory.md)
 
 ### comDataIn Description
 
@@ -43,8 +43,8 @@ in the form of an argument of `Fw::Buffer` type. From the perspective of the app
 This port carries a status of `Fw::Success::SUCCESS` or `Fw::Success::FAILURE` typically in response to a call to the
 `comDataIn` port described above. 
 
-!!! note
-    it is critical to obey the protocol as described in the protocol section below.
+> [!NOTE]
+> it is critical to obey the protocol as described in the protocol section below.
 
 ## Communication Queue Protocol
 
@@ -73,8 +73,8 @@ When a frame is produced the communication adapter is responsible for determinin
 statuses must be passed through. When no frame is produced, the communication adapter does not receive a frame and is
 incapable of producing a status. `Svc::Framer` must act appropriately in this case.
 
-!!! note
-    `Svc::Framer` must also pass through the initiation message from the communication adapter to start data flow.
+> [!NOTE]
+> `Svc::Framer` must also pass through the initiation message from the communication adapter to start data flow.
 
 ## Communication Adapter Protocol
 
@@ -94,5 +94,5 @@ startup to indicate communication is initially ready and once after each Fw::Suc
 communication has been restored. By emitting Fw::Success::SUCCESS after any failure, the communication adapter ensures
 that each received message eventually results in a Fw::Success::SUCCESS.
 
-!!! note
-    It is imperative that *Communication Adapters* implement the `comStatus` protocol correctly.
+> [!NOTE]
+> It is imperative that *Communication Adapters* implement the `comStatus` protocol correctly.

@@ -168,8 +168,8 @@ Along with implementation, unit tests can be templated and implemented to test a
 requirements of the component. These should be developed and run often to ensure the implemented
 component works.
 
-!!! note
-      If `fprime-util new --cookiecutter` was used to create the component, and the user chose the generate unit tests, steps 1-3 should be skipped because these are automatically done.
+> [!NOTE]
+> If `fprime-util new --cookiecutter` was used to create the component, and the user chose the generate unit tests, steps 1-3 should be skipped because these are automatically done.
 
 To add unit tests to a component:
 

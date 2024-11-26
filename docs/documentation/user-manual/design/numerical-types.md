@@ -97,8 +97,8 @@ PlatformIndexType index = 3;
 printf("Index %" PRI_PlatformIndexType ". Min %" PRI_PlatformIndexType, index, std::numeric_limits<PlatformIndexType>::min());
 ```
 
-!!! note
-    in order for F´ to compile without warnings it is necessary that each of the platform types are elements in the set of integers supplied by the C standard integers header (`stdint.h`). i.e. each type must be an `int8_t`, `int16_t`, `int32_t`, `int64_t` or unsigned variants. On some compilers `int` and `unsigned int` are not members of that set and on those platforms it is imperative that both `PlatformIntType` and `PlatformUIntType` be set to some fixed size type instead.
+> [!NOTE]
+> in order for F´ to compile without warnings it is necessary that each of the platform types are elements in the set of integers supplied by the C standard integers header (`stdint.h`). i.e. each type must be an `int8_t`, `int16_t`, `int32_t`, `int64_t` or unsigned variants. On some compilers `int` and `unsigned int` are not members of that set and on those platforms it is imperative that both `PlatformIntType` and `PlatformUIntType` be set to some fixed size type instead.
 
 ### Configurable Integer Types
 
@@ -127,8 +127,8 @@ systems. These GDS types have defaults based on configurable platform independen
 | FwPrmIdType            | F´ parameter ids           | U32                   | PRI_FwPrmIdType            |
 | FwTlmPacketizeIdType   | F´ telemetry packet ids    | U16                   | PRI_FwTlmPacketizeIdType   |
 
-!!! note
-    the F´ GDS expects the above types to use their default setting. Users intending to use the F´ GDS should not stray from the above definitions.
+> [!NOTE]
+> the F´ GDS expects the above types to use their default setting. Users intending to use the F´ GDS should not stray from the above definitions.
 
 All defaults can be overridden via project specific configuration supplying a custom `FpConfig.h`. A complete
 definition of a framework/GDS type in `FpConfig.h` would look like:
